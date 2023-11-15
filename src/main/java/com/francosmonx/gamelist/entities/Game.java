@@ -10,13 +10,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "tb_game")
 public class Game {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Long title;
+	private String title;
 	
 	@Column(name = "game_year")
 	private Integer year;
@@ -24,7 +24,9 @@ public class Game {
 	private String platforms;
 	private Double score;
 	private String imgUrl;
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	public Long getId() {
 		return id;
@@ -32,10 +34,10 @@ public class Game {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getTitle() {
+	public String getTitle() {
 		return title;
 	}
-	public void setTitle(Long title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 	public Integer getYear() {
