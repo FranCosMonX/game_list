@@ -1,8 +1,6 @@
 package com.francosmonx.gamelist.dto;
-//é uma classe independente do ano. Apenas os dados necessários para uma funcionalidade
 
 import com.francosmonx.gamelist.entities.Game;
-
 
 public class GameMin {
 	private Long id;
