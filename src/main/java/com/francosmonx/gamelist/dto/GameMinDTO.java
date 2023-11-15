@@ -2,16 +2,16 @@ package com.francosmonx.gamelist.dto;
 
 import com.francosmonx.gamelist.entities.Game;
 
-public class GameMin {
+public class GameMinDTO {
 	private Long id;
 	private String title;
 	private Integer year;
 	private String imgUrl;
 	private String shortDescription;
 	
-	public GameMin() {}
+	public GameMinDTO() {}
 
-	public GameMin(Game entity) {
+	public GameMinDTO(Game entity) {
 		super();
 		id = entity.getId();
 		title = entity.getTitle();
