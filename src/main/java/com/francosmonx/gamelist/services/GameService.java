@@ -17,17 +17,12 @@ public class GameService {
 	@Autowired
 	private GameRepository gameRepository;
 	
-	//garantir que seja respeitado os principios das transações - ACID
-	//arg : Operação de leitura
 	@Transactional(readOnly = true)
-	public GameDTO FindById(Long id) {
-		//gameRepository.findById(id) retornar um Optional.
-		//teria que ter um tratamento de exceções para caso o id não exista
+	public GameDTO findById(Long id) {
 		Game result = gameRepository.findById(id).get();
 		return new GameDTO(result);
 	}
 	
-	//garantir que seja respeitado os principios das transações - ACID
 	@Transactional(readOnly = true)
 	public List<GameMinDTO> findAll(){
 		var result = gameRepository.findAll();

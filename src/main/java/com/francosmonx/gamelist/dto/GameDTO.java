@@ -19,8 +19,7 @@ public class GameDTO {
 	public GameDTO() {}
 
 	public GameDTO(Game entity) {
-		//para usar esta funcionalidade, é obrigatorio que tenha os getterss end setters
-		BeanUtils.copyProperties(entity, this); // copiar tudo que esta na entidade para o dto, já que tem os mesmo atributos
+		BeanUtils.copyProperties(entity, this);
 	}
 
 	public Long getId() {

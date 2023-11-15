@@ -6,11 +6,9 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-//informa pro belonging que a pk é formada pelos dois campos game e list
 @Embeddable
 public class BelongingPK {
 	
-	//obter a pk das duas tabelas : chave estrangeira
 	@ManyToOne
 	@JoinColumn(name = "game_id")
 	private Game game;
