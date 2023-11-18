@@ -4,7 +4,7 @@ public interface GameMinProjection {
 	//colocar metodos gets correspondente a consulta sql
 	Long getId();
 	String getTitle();
-	Integer getYear();
+	Integer getGameYear();
 	String getImgUrl();
 	String getShortDescription();
 	Integer getPosition();
